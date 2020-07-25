@@ -20,15 +20,15 @@ for d in data:
     for w in d['watchers']:
         if(w == 'merlin'):
             merlin_w.append(([d['name'], d['priority']]))
-        else:
+        if(w == 'morris'):
             morris_w.append(([d['name'], d['priority']]))
 
 
 #ordena pela prioridade...
-csa_m_Rev = sorted(csa_m, key=lambda csa: csa[1], reverse=True)
-merlin_m_Rev= sorted(merlin_m, key=lambda mrl_m: mrl_m[1], reverse=True)
-merlin_w_Rev = sorted(merlin_w, key=lambda mrl_w: mrl_w[1], reverse=True)
-morris_w_Rev= sorted(morris_w, key=lambda mor_w: mor_w[1], reverse=True)
+csa_m_Rev = sorted(csa_m, key=lambda csa: csa[1])
+merlin_m_Rev= sorted(merlin_m, key=lambda mrl_m: mrl_m[1])
+merlin_w_Rev = sorted(merlin_w, key=lambda mrl_w: mrl_w[1])
+morris_w_Rev= sorted(morris_w, key=lambda mor_w: mor_w[1])
 
 def list_data(tpl_dt):
     lst_tp = []
